@@ -65,7 +65,7 @@ final class ResultPager implements ResultPagerInterface
      *
      * @return void
      */
-    public function __construct(Client $client, int $perPage = null)
+    public function __construct(Client $client, ?int $perPage = null)
     {
         if (null !== $perPage && ($perPage < 1 || $perPage > 50)) {
             throw new ValueError(\sprintf('%s::__construct(): Argument #2 ($perPage) must be between 1 and 50, or null', self::class));
